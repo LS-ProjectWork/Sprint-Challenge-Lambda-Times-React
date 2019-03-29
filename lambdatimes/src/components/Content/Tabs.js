@@ -22,9 +22,7 @@ const Tabs = props => {
 };
 
 Tab.propTypes = {
-  tabs: PropTypes.shape({
-    tabData: PropTypes.string
-  })
+  tabs: PropTypes.array
 }
 
 export default Tabs;

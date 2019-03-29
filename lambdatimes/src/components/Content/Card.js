@@ -15,4 +15,12 @@ const Card = props => {
   );
 };
 
+Card.propTypes = {
+  card = PropTypes.shape({
+    headline: PropTypes.string,
+    img: PropTypes.string,
+    author: PropTypes.string
+  })
+}
+
 export default Card;

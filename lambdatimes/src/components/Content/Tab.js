@@ -12,8 +12,8 @@ const Tab = props => {
 };
 
 Tab.propTypes = {
-  tab: PropTypes.object,
-  selectedTab: PropTypes.object
+  tab: PropTypes.arrayOf(PropTypes.string),
+  selectedTab: PropTypes.string
 }
 
 export default Tab;
