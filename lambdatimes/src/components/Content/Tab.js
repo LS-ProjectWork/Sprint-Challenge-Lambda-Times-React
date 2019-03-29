@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 const Tab = props => {
+  if(props.tab === props.selectedTab) {
+    return {className = 'tabs active-tab'}} else {
+      return {className = 'tab'}
+    }
+  }
   return (
     <div
-      className={(props.tab === props.selectedTab) ? 'tab active-tab' : 'tab' }
-      onClick={tab => {props.tab.selectTabHandler()
-      }}
-    >
+      className={''}
+      onClick={props.selectTabHandler}>
       {props.tab.toUpperCase()}
     </div>
   );
