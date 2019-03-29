@@ -25,14 +25,15 @@ export default class Content extends Component {
   };
 
   filterCards = () => {
-    this.state.cards.filter(card => card.tab !== this.state.selected)
-    return this.state.cards;
+   return this.state.cards.filter(card => card.tab === this.state.selected || this.state.selected == 'all')
   };
 
   render() {
     return (
       <div className="content-container">
-        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected} />
+        <Tabs tabs={this.state.tabs} 
+        selectedTab={this.state.selected} 
+        selectTabHandler={this.changeSelected} />
         <Cards cards={this.filterCards()} />
       </div>
     );
