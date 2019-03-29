@@ -16,7 +16,7 @@ const Tabs = props => {
 };
 
 Tab.propTypes = {
-  tabsObject: PropTypes.shape({
+  tabs: PropTypes.shape({
     tabData: PropTypes.string
   })
 }
